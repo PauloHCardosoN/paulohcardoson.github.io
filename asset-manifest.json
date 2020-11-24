@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/paulohcardoson.github.io/static/css/main.4c700ca1.chunk.css",
+    "main.js": "/paulohcardoson.github.io/static/js/main.dea452b5.chunk.js",
+    "main.js.map": "/paulohcardoson.github.io/static/js/main.dea452b5.chunk.js.map",
+    "runtime-main.js": "/paulohcardoson.github.io/static/js/runtime-main.f9a47154.js",
+    "runtime-main.js.map": "/paulohcardoson.github.io/static/js/runtime-main.f9a47154.js.map",
+    "static/js/2.a59b8340.chunk.js": "/paulohcardoson.github.io/static/js/2.a59b8340.chunk.js",
+    "static/js/2.a59b8340.chunk.js.map": "/paulohcardoson.github.io/static/js/2.a59b8340.chunk.js.map",
+    "index.html": "/paulohcardoson.github.io/index.html",
+    "static/css/main.4c700ca1.chunk.css.map": "/paulohcardoson.github.io/static/css/main.4c700ca1.chunk.css.map",
+    "static/js/2.a59b8340.chunk.js.LICENSE.txt": "/paulohcardoson.github.io/static/js/2.a59b8340.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/paulohcardoson.github.io/static/media/SFMono-Regular.8799e638.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f9a47154.js",
+    "static/js/2.a59b8340.chunk.js",
+    "static/css/main.4c700ca1.chunk.css",
+    "static/js/main.dea452b5.chunk.js"
+  ]
+}
