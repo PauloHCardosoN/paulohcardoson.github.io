@@ -1,20 +1,17 @@
 import styled from 'styled-components';
 import { secundaryColor } from '../../../values/colors';
-import { CodeFont } from '../../../values/fonts';
 
 export const Container = styled.div`
-  transition: 0.25s;
   position: fixed;
   bottom: 0;
-  right: 20px;
+  left: 20px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  writing-mode: vertical-rl;
+  flex-direction: column;
+  transition: 0.25s;
 
   ::after{
     content: "";
-    margin-top: 20px;
     width: 1px;
     height: 90px;
     background: rgb(45, 55, 86);
@@ -26,14 +23,17 @@ export const Container = styled.div`
 `
 
 export const Link = styled.a`
-  transition: .25s;
   text-decoration: none;
-  color: #FFF;
-  font-family: ${CodeFont};
-  font-size: 15px;
+  margin-bottom: 20px;
+  font-size: 20px;
 
-  :hover {
-    padding-bottom: 10px;
-    color: ${secundaryColor};
+  svg {
+    cursor: pointer;
+    color: rgb(161, 181, 205);
+    transition: 0.25s;
+
+    :hover{
+      color: ${secundaryColor};
+    }
   }
 `

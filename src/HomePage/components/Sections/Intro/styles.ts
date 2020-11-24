@@ -17,7 +17,7 @@ export const Container = styled.section`
 export const IntroText = styled.p<{ displaying: Boolean }>`
   font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
   color: ${secundaryColor};
-  font-size: 25px;
+  font-size: clamp(14px, 5vw, 16px);;
 
   ::after{
     content: '';
@@ -32,10 +32,10 @@ export const IntroText = styled.p<{ displaying: Boolean }>`
 
 export const NameText = styled.p`
   color: ${primaryColor};
-  margin: 2.5px 0 10px;
-  font-size: 100px;
+  margin: 2.5px 0 5px;
+  font-size: clamp(70px, 5vw, 100px);
   font-weight: 700;
-  font-family: "Calibre","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+  font-family: "Calibre";
 `
 
 export const DescriptionText = styled.p`

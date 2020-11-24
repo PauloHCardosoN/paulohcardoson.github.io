@@ -8,10 +8,18 @@ export const Container = styled.section`
   align-items: center;
   justify-content: space-between;
   width: 100%;
+
+  @media(max-width: 1100px) {
+    flex-direction: column;
+  }
 `
 
 export const DivisionContainer = styled.div`
   width: 45%;
+
+  @media(max-width: 1100px) {
+    width: 100%;
+  }
 `
 
 export const TitleContainer = styled.div`

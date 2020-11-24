@@ -18,6 +18,10 @@ export const Container = styled.header`
   background: #0a192f;
   opacity: 0.75;
   backdrop-filter: blur(10px);
+
+  @media(max-width: 700px) {
+    justify-content: center;
+  }
 `
 
 export const LogoImg = styled.div`
@@ -32,6 +36,10 @@ export const LogoImg = styled.div`
 export const NavBar = styled.nav`
   display: flex;
   color: ${secundaryColor};
+
+  @media(max-width: 700px) {
+    display: none;
+  }
 `
 
 export const NavBarItemContainer = styled.div`

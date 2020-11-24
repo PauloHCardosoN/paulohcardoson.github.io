@@ -3,7 +3,8 @@ import React from 'react';
 // Componentes
 import { Container, MainContainer } from './styles';
 import Header from './components/Header';
-import ExternalLinks from './components/ExternalLinks';
+import LeftExternalLinks from './components/LeftExternalLinks';
+import BottomExternalLinks from './components/BottomExtenalLinks';
 import EmailLinkContainer from './components/EmailLinkContainer';
 
 // Seções
@@ -24,7 +25,7 @@ const App: React.FC = () => {
       <Header sections={sections} />
 
       {/* Links externos */}
-      <ExternalLinks />
+      <LeftExternalLinks />
 
       {/* Link do email */}
       <EmailLinkContainer />
@@ -34,6 +35,10 @@ const App: React.FC = () => {
         <IntroSection/>
 
         <AboutSection />
+
+        <footer>
+          <BottomExternalLinks />
+        </footer>
       </MainContainer>
     </Container>
   );
