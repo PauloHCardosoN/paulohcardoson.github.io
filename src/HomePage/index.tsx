@@ -12,7 +12,6 @@ import IntroSection from './components/Sections/Intro';
 import AboutSection from './components/Sections/About';
 
 const sections = [
-  "Intro",
   "Sobre",
   "Skills",
   "Contato"

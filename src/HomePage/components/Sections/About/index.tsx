@@ -54,7 +54,7 @@ const AboutSection: React.FC = () => {
         </AboutContainer>
       </DivisionContainer>
 
-      <AboutImage src="https://media-exp1.licdn.com/dms/image/C4D35AQErQxqSFlMb8A/profile-framedphoto-shrink_200_200/0/1605295033541?e=1606262400&v=beta&t=H67exsfvg-oNP9aGtKLwjK0H5yV0EeyYLTFKXbuzGek"/>
+      <AboutImage src="https://media-exp1.licdn.com/dms/image/C4D35AQErQxqSFlMb8A/profile-framedphoto-shrink_200_200/0/1605295033541?e=1611536400&v=beta&t=OdxErygKxLnrXb-0BEyDKgdu1i7l99FCuxQ8OrnIK2U"/>
     </Container>
   )
 }
