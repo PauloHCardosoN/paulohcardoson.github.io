@@ -1,7 +1,7 @@
 import React from 'react';
 import { BsCaretRight } from 'react-icons/bs';
 
-import { secundaryColor } from '../../../../values/colors';
+import { secundaryColor } from '../../../values/colors';
 
 // Componentes
 import { Container, DivisionContainer, TitleContainer, TitleText, AboutContainer, AboutText, AboutTextHighlightText, AboutImage, TechsGrid, TechItemContainer } from './styles';
@@ -27,7 +27,7 @@ const AboutSection: React.FC = () => {
 
         <AboutContainer>
           <AboutText>
-            Meu nome é <AboutTextHighlightText>Paulo</AboutTextHighlightText>, atualmente, tenho 15 anos, e sou apaixonado por programação, 
+            Meu nome é <AboutTextHighlightText>Paulo</AboutTextHighlightText>, atualmente, tenho 16 anos, e sou apaixonado por programação, 
             principalmente por <AboutTextHighlightText color="#F7E04B">Javascript</AboutTextHighlightText>, começei a estudar desenvolvimento <AboutTextHighlightText>FrontEnd</AboutTextHighlightText>, com 13 anos, 
             e estudei <AboutTextHighlightText>BackEnd</AboutTextHighlightText> com <AboutTextHighlightText color="#777BB3">PHP</AboutTextHighlightText> e 
             Banco de Dados com <AboutTextHighlightText>MySQL</AboutTextHighlightText>, mas depois de um tempo, migrei para <AboutTextHighlightText color="#639A58">NodeJS</AboutTextHighlightText>.
@@ -54,7 +54,7 @@ const AboutSection: React.FC = () => {
         </AboutContainer>
       </DivisionContainer>
 
-      <AboutImage src="https://media-exp1.licdn.com/dms/image/C4D35AQErQxqSFlMb8A/profile-framedphoto-shrink_200_200/0/1605295033541?e=1611536400&v=beta&t=OdxErygKxLnrXb-0BEyDKgdu1i7l99FCuxQ8OrnIK2U"/>
+      <AboutImage src="/selfphoto.jpeg"/>
     </Container>
   )
 }

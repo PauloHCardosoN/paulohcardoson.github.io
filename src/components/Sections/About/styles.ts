@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { primaryColor, secundaryColor } from '../../../../values/colors';
-import { CodeFont } from '../../../../values/fonts';
+import { primaryColor, secundaryColor } from '../../../values/colors';
+import { CodeFont } from '../../../values/fonts';
 
 export const Container = styled.section`
   counter-increment: section 1;

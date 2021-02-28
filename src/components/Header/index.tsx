@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import { Container, LogoImg, NavBar, NavBarItemContainer, NavBarItemIndex, NavBarItemText } from './styles';
+import { Container, LogoImgContainer, LogoImg, NavBar, NavBarItemContainer, NavBarItemIndex, NavBarItemText } from './styles';
 
 const Header: React.FC<{ sections: string[] }> = (props) => {
   const { sections } = props;
@@ -24,10 +24,16 @@ const Header: React.FC<{ sections: string[] }> = (props) => {
 
   return (
     <Container>
-      <LogoImg style={ wasLogoAnimated
-      ? { marginLeft: 0, opacity: 1 }
-      : { marginLeft: -200, opacity: 0 }
-    } />
+      <LogoImgContainer
+        href="https://github.com/PauloHCardosoN"
+        style={{
+          marginLeft: wasLogoAnimated ? 0 : -200,
+          opacity: wasLogoAnimated ? 1 : 0
+        }}
+      >
+        <LogoImg />
+      </LogoImgContainer>
+      
 
       <NavBar>
         {sections.map((value, index) => (

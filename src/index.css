@@ -3,7 +3,7 @@
 
 @font-face {
   font-family: 'Calibre';
-  src: url(./fonts/Calibre-Regular.woff2);
+  src: local('Calibre') url(fonts/Calibre-Regular.woff2);
   font-weight: 400;
   font-style: normal;
   font-display: auto;
@@ -11,7 +11,7 @@
 
 @font-face {
   font-family: 'Calibre';
-  src: url(./fonts/Calibre-Medium.woff2);
+  src: local('Calibre') url(fonts/Calibre-Medium.woff2);
   font-weight: 500;
   font-style: normal;
   font-display: auto;
@@ -19,7 +19,7 @@
 
 @font-face {
   font-family: 'Calibre';
-  src: url(./fonts/Calibre-Semibold.woff2);
+  src: url(fonts/Calibre-Semibold.woff2);
   font-weight: 600;
   font-style: normal;
   font-display: auto;
@@ -27,7 +27,7 @@
 
 @font-face {
   font-family: 'Calibre';
-  src: url(./fonts/Calibre-Regular.woff2);
+  src: url(fonts/Calibre-Regular.woff2);
   font-weight: 400;
   font-style: italic;
   font-display: auto;
@@ -35,7 +35,7 @@
 
 @font-face {
   font-family: 'Calibre';
-  src: url(./fonts/Calibre-Medium.woff2);
+  src: url(fonts/Calibre-Medium.woff2);
   font-weight: 500;
   font-style: italic;
   font-display: auto;
@@ -43,7 +43,7 @@
 
 @font-face {
   font-family: 'Calibre';
-  src: url(./fonts/Calibre-Semibold.woff2);
+  src: url(fonts/Calibre-Semibold.woff2);
   font-weight: 600;
   font-style: italic;
   font-display: auto;
@@ -51,7 +51,7 @@
 
 @font-face {
   font-family: 'SF Mono';
-  src: url(./fonts/SFMono-Regular.woff2);
+  src: url(fonts/SFMono-Regular.woff2);
   font-weight: 400;
   font-style: normal;
   font-display: auto;

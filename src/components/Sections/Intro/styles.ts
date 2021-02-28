@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import { primaryColor, secundaryColor } from '../../../../values/colors';
-import { CodeFont } from '../../../../values/fonts';
+import { primaryColor, secundaryColor } from '../../../values/colors';
+import { CodeFont } from '../../../values/fonts';
 
 const headerSize = 127.28;
 

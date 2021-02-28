@@ -1,10 +1,8 @@
 import styled from 'styled-components';
 
-// Imagens
-import logo from '../../images/logo.png';
 
-import { secundaryColor } from '../../../values/colors';
-import { CodeFont } from '../../../values/fonts';
+import { primaryColor, secundaryColor } from '../../values/colors';
+import { CodeFont } from '../../values/fonts';
 
 export const Container = styled.header`
   display: flex;
@@ -24,13 +22,26 @@ export const Container = styled.header`
   }
 `
 
+export const LogoImgContainer = styled.a`
+  transition: 1s all, 0.25s border-color;
+  padding: 2.5px;
+  border-radius: 50%;
+  border-width: 2.5px;
+  border-style: solid;
+  border-color: ${secundaryColor};
+
+  :hover {
+    border-color: ${primaryColor};
+  }
+`
+
 export const LogoImg = styled.div`
-  transition: 1s;
-  width: 175px;
-  height: 67.5px;
-  background-image: url(${logo});
-  background-position: center;
-  background-size: cover;
+  width: 70px;
+  height: 70px;
+  border-radius: inherit;
+  border-right: 1px solid ${primaryColor};
+  background-size: contain;
+  background-image: url('https://avatars.githubusercontent.com/u/59656828');
 `
 
 export const NavBar = styled.nav`
