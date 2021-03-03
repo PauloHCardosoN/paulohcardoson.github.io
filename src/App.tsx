@@ -4,12 +4,12 @@ import React from 'react';
 import { Container, MainContainer } from './styles';
 import Header from './components/Header';
 import LeftExternalLinks from './components/LeftExternalLinks';
-import BottomExternalLinks from './components/BottomExtenalLinks';
 import EmailLinkContainer from './components/EmailLinkContainer';
 
 // Seções
 import IntroSection from './components/Sections/Intro';
 import AboutSection from './components/Sections/About';
+import FooterSection from './components/Sections/Footer';
 
 const sections = [
   "Sobre",
@@ -35,9 +35,7 @@ const App: React.FC = () => {
 
         <AboutSection />
 
-        <footer>
-          <BottomExternalLinks />
-        </footer>
+        <FooterSection />
       </MainContainer>
     </Container>
   );

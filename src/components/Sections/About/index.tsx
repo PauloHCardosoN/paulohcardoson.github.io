@@ -1,18 +1,30 @@
-import React from 'react';
-import { BsCaretRight } from 'react-icons/bs';
+import React, { useEffect, useRef, useState } from 'react';
+import { SiNextDotJs, SiTypescript, SiElectron, SiKotlin, SiReact } from 'react-icons/si';
+import { GoBrowser } from 'react-icons/go';
+import { IconType } from 'react-icons/lib';
 
 import { secundaryColor } from '../../../values/colors';
 
 // Componentes
-import { Container, DivisionContainer, TitleContainer, TitleText, AboutContainer, AboutText, AboutTextHighlightText, AboutImage, TechsGrid, TechItemContainer } from './styles';
+import { Container, TitleContainer, TitleText, AboutContainer, AboutText, AboutTextHighlightText, AboutImageContainer, AboutImage, TechsGrid, TechItemContainer } from './styles';
 
 const AboutSection: React.FC = () => {
-  const TechnologiesContainer: React.FC<{ techs: string[] }> = (props) => (
+  const [imageContainerWidth, setImageContainerWidth] = useState(0);
+  const imageContainerRef = useRef<HTMLDivElement>()
+
+  useEffect(() => {
+    if (imageContainerRef.current) {
+      setImageContainerWidth(imageContainerRef.current.offsetWidth)
+      window.addEventListener('resize', () => setImageContainerWidth(imageContainerRef.current.offsetWidth))
+    }
+  }, [imageContainerRef])
+
+  const TechnologiesContainer: React.FC<{ techs: { title: string, Icon: IconType }[] }> = (props) => (
     <TechsGrid>
-      {props.techs.map(tech => (
-        <TechItemContainer>
-          <BsCaretRight color={secundaryColor} />
-          <span>{tech}</span>
+      {props.techs.map(({ title, Icon }, index) => (
+        <TechItemContainer key={index}>
+          <Icon color={secundaryColor} size={20} />
+          <span>{title}</span>
         </TechItemContainer>
       ))}
     </TechsGrid>
@@ -20,7 +32,7 @@ const AboutSection: React.FC = () => {
 
   return (
     <Container>
-      <DivisionContainer>
+      <div>
         <TitleContainer>
           <TitleText>Sobre</TitleText>
         </TitleContainer>
@@ -43,18 +55,52 @@ const AboutSection: React.FC = () => {
             Alguns tecnologias que eu estive utilizando recentemente:  
           </AboutText>
 
-          <TechnologiesContainer techs={[
-            'JavaScript (ES6+)',
-            'HTML & CSS / LESS',
-            'ReactJS',
-            'React Native',
-            'Node.js',
-            'Next.js'
-          ]}/>
+          <TechnologiesContainer
+            techs={[
+              {
+                title: 'HTML & CSS / LESS',
+                Icon: GoBrowser
+              },
+              {
+                title: 'ECMAScript (ES6+) & Typescript',
+                Icon: SiTypescript
+              },
+              {
+                title: 'React JS & React Native',
+                Icon: SiReact
+              },
+              {
+                title: 'ElectronJS',
+                Icon: SiElectron
+              },
+              {
+                title: 'Next.js',
+                Icon: SiNextDotJs
+              },
+              {
+                title: 'Kotlin',
+                Icon: SiKotlin
+              }
+            ]}
+          />
         </AboutContainer>
-      </DivisionContainer>
+      </div>
 
-      <AboutImage src="/selfphoto.jpeg"/>
+      <div
+        style={{
+          width: "150%",
+          height: imageContainerWidth,
+          marginLeft: 50,
+          marginBottom: 50,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}
+      >
+        <AboutImageContainer ref={imageContainerRef}>
+          <AboutImage src="https://avatars.githubusercontent.com/u/59656828" />
+        </AboutImageContainer>
+      </div>
     </Container>
   )
 }

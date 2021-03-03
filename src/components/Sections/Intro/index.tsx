@@ -10,21 +10,17 @@ const IntroSection: React.FC = () => {
   
   useEffect(() => {
     if(substringedIntroTextIndex !== IntroTextString.length){
-      setTimeout(() => {
-        setSubstringedIntroTextIndex(substringedIntroTextIndex + 1)
-      }, 125);
+      setTimeout(() => setSubstringedIntroTextIndex(substringedIntroTextIndex + 1), 125);
     }
   }, [substringedIntroTextIndex])
 
   useEffect(() => {
-    setTimeout(() => {
-      setDisplaying_State(!displaying_)
-    }, 1000)
+    setTimeout(() => setDisplaying_State(!displaying_), 1000)
   }, [displaying_])
 
   return (
     <Container>
-      <IntroText displaying={displaying_}>{IntroTextString.substr(0,substringedIntroTextIndex)}</IntroText>
+      <IntroText {...{ displaying_ }}>{IntroTextString.substr(0,substringedIntroTextIndex)}</IntroText>
       <NameText>Paulo Cardoso</NameText>
       <DescriptionText>Sou um pequeno desenvolvedor FullStack & Mobile apaixonado por tecnologia.</DescriptionText>
     </Container>

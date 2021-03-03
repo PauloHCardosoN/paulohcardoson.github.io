@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { secundaryColor } from '../../values/colors';
+import { secundaryColor, textColor } from '../../values/colors';
 import { CodeFont } from '../../values/fonts';
 
 export const Container = styled.div`
@@ -28,7 +28,7 @@ export const Container = styled.div`
 export const Link = styled.a`
   transition: .25s;
   text-decoration: none;
-  color: #FFF;
+  color: ${textColor};
   font-family: ${CodeFont};
   font-size: 15px;
 

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { AiFillGithub } from 'react-icons/ai';
-import { GrLinkedinOption } from 'react-icons/gr';
+import { FiGithub,FiLinkedin } from 'react-icons/fi';
 
 import { Container, Link } from './styles';
 
@@ -14,11 +13,11 @@ const ExternalLinks: React.FC = () => {
   return (
     <Container style={{ left: wasAnimated ? undefined : -200 }}>
       <Link target="_blank" href="https://github.com/PauloHCardosoN" >
-        <AiFillGithub/>
+        <FiGithub />
       </Link>
       
-      <Link>
-        <GrLinkedinOption />
+      <Link target="_blank" href="https://linkedin.com/in/paulohcardoson">
+        <FiLinkedin />
       </Link>
     </Container>
   )

@@ -1,24 +1,15 @@
 import styled from 'styled-components';
-import { primaryColor, secundaryColor } from '../../../values/colors';
+import { primaryColor, secundaryColor, titleColor, textColor } from '../../../values/colors';
 import { CodeFont } from '../../../values/fonts';
 
 export const Container = styled.section`
+  width: 100%;
   counter-increment: section 1;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
 
   @media(max-width: 1100px) {
     flex-direction: column;
-  }
-`
-
-export const DivisionContainer = styled.div`
-  width: 45%;
-
-  @media(max-width: 1100px) {
-    width: 100%;
   }
 `
 
@@ -26,13 +17,6 @@ export const TitleContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  ::before{
-    content: '0' counter(section) '.';
-    font-size: 20px;
-    font-family: ${CodeFont};
-    color: ${secundaryColor};
-  }
 
   ::after{
     content: '';
@@ -45,11 +29,17 @@ export const TitleContainer = styled.div`
 `
 
 export const TitleText = styled.span`
-  margin-top: 7.5px;
+  color: ${titleColor};
   font-size: 30px;
-  font-family: "Calibre";
-  color: #ffffffc0;
-  font-weight: 700;
+  font-family: "Roboto";
+  font-weight: 600;
+
+  ::before{
+    content: '0' counter(section) '.';
+    font-family: ${CodeFont};
+    font-size: 25px;
+    color: ${secundaryColor};
+  }
 `
 
 export const AboutContainer = styled.div`
@@ -58,8 +48,8 @@ export const AboutContainer = styled.div`
 `
 
 export const AboutText = styled.p`
-  font-family: ${CodeFont};
-  font-weight: 300;
+  color: ${textColor};
+  font-weight: 600;
 
   :not(:first-of-type) {
     margin-top: 20px;
@@ -70,14 +60,21 @@ export const AboutTextHighlightText = styled.b<{ color?: string }>`
   color: ${props => props.color || primaryColor};
 `
 
-export const AboutImage = styled.img`
+export const AboutImageContainer = styled.div`
   width: 100%;
   height: 100%;
-  max-width: 370px;
-  max-height: 370px;
+  max-width: 500px;
+  padding: 10px;
   border-radius: 50%;
   border: 2px solid ${secundaryColor};
-  padding: 10px;
+`
+
+export const AboutImage = styled.div<{ src: string }>`
+  width: 100%;
+  height: 100%;
+  background: url(${props => props.src}) center bottom no-repeat;
+  background-size: 100%;
+  border-radius: inherit;
 `
 
 export const TechsGrid = styled.div`
@@ -90,18 +87,13 @@ export const TechsGrid = styled.div`
 export const TechItemContainer = styled.div`
   display: flex;
   align-items: center;
+  color: ${textColor};
 
   span {
-    color: #FFF;
-    transition: .25s padding-left;
-    margin-top: 2px;
-    padding-left: 5px;
+    margin-top: 3px;
+    padding-left: 7.5px;
     font-family: ${CodeFont};
-    font-weight: lighter;
+    font-weight: 600;
     font-size: 12px;
-
-    :hover {
-      padding-left: 10px;
-    }
   }
 `
